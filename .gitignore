@@ -1,0 +1,54 @@
+# Private configuration
+.env
+.env.*
+!.env.example
+config.yaml
+config.yml
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+
+# Runtime output and local data
+local_deps/
+outputs/
+output/
+logs/
+eval_outputs/
+judgement/
+screenshot/
+temp/
+web/captcha/images/
+*.log
+
+# Python and editor artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+.idea/
+.vscode/
+
+# Documentation is limited to the English and Chinese READMEs
+paper/
+docs/
+figures/
+figure/
+*.pdf
+*.docx
+*.pptx
+*.tex
+*.md
+!README.md
+!README_CN.md
+*.zip
+*.tar.gz

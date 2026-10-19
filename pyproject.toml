@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solvebind"
+version = "0.1.0"
+description = "Hierarchical solving and evidence-grounded runtime supervision for GUI agents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["Pillow>=10", "requests>=2.31"]
+
+[project.optional-dependencies]
+modelscope-ocr = [
+  "modelscope==1.15.0", "opencv-python>=4.8", "numpy>=1.23,<2",
+  "torch", "torchvision", "transformers==4.30.0", "tensorflow==2.13.0",
+  "tf_slim", "pyclipper", "shapely", "pyyaml", "timm", "SentencePiece",
+]
+
+[project.scripts]
+solvebind = "hll.cli:main"
+hll = "hll.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hll*", "web*", "scripts*"]
+namespaces = false
+
+[tool.setuptools]
+include-package-data = false
